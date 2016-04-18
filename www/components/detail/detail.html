@@ -1,0 +1,51 @@
+<ion-view>
+  <ion-content>
+    <div class="card">
+      <div class="item item-text-wrap">
+        <p>Units required : {{posts[detail.index].units}}</p>
+
+        <p>Donation received : {{posts[detail.index].done}}</p>
+
+        <p>Still required : {{posts[detail.index].req}}</p>
+
+        <p>Blood Group : {{posts[detail.index].blood}}</p>
+
+        <p>Location : {{posts[detail.index].city}},{{posts[detail.index].province}},{{posts[detail.index].country}}</p>
+
+        <p>Hospital : {{posts[detail.index].hospital}}</p>
+
+        <p>Urgency : {{posts[detail.index].urgency}}</p>
+
+        <p>Relation with Patient : {{posts[detail.index].relation}}</p>
+
+        <p>Contact no : {{posts[detail.index].contact}}</p>
+
+        <p>Additional information : {{posts[detail.index].info}}</p>
+      </div>
+
+      <h2 style="text-align: center;color: rgb(218, 31, 39)">Volunteers</h2>
+
+      <div class="item item-text-wrap" ng-repeat="item in posts[detail.index].donors track by $index">
+        <p><span style="font-size: 1.3em">{{item.fName}} {{item.lName}}</span> -- {{item.blood}}</p>
+
+        <p><b><span ng-show="posts[detail.index].volunteers[$index].donated">Donated</span><span
+          ng-hide="posts[detail.index].volunteers[$index].donated">Not donated</span></b></p>
+      </div>
+
+      <h2 style="text-align: center;color: rgb(33, 154, 137)">Comments</h2>
+
+      <div class="item item-text-wrap" ng-repeat="item in posts[detail.index].comments track by $index">
+        <p><span style="font-size: 1.3em;font-weight: bold;">{{item.name}}</span> -- {{item.text}}</p>
+      </div>
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" ng-model="detail.commentData"/>
+        </label>
+        <button class="button button-positive" ng-click="detail.comment(detail.commentData)">
+          POST
+        </button>
+      </div>
+    </div>
+    </div>
+  </ion-content>
+</ion-view>

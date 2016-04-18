@@ -1,0 +1,59 @@
+.font-increase{
+  font-size: 1.6em;
+}
+.main{
+  font-size: 1.8em !important;
+  font-weight: bold;
+}
+.spinner svg {
+  width: 200px;
+  height: 100px;
+  stroke: #5b98da;
+  fill: #5b98da;
+  position: absolute;
+  top: 200px;
+  left: 20%
+
+}
+
+.right{
+  float: right;
+  font-size: 100px;
+  padding-right: 50px;
+}
+.bgGreen{
+  background-color: rgb(36,204,45);
+  color:white;
+  text-align: center;
+}
+
+.bgRed{
+  background-color: rgb(204, 42, 42);
+  color:white;
+  text-align: center;
+}
+/*.ion-content{
+  background-color: rgb(229,0,21) !important;
+}*/
+
+/*
+.scroll-content {
+  background-image: url(../img/a.jpg);
+}
+*/
+
+.cyan{
+  background-color: rgb(33, 154, 137);
+  color: white !important;
+}
+.bar-red{
+  background-color: rgb(33, 154, 137);
+}
+
+.red{
+  background-color: rgb(218, 31, 39);
+  color: white !important;
+}
+.white{
+  color:white !important;
+}

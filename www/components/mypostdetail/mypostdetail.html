@@ -1,0 +1,70 @@
+<br/>
+<br/>
+<br/>
+
+<ion-view>
+  <ion-content>
+    <div class="card">
+      <div class="item item-text-wrap">
+        <span ng-class="{balanced : posts[mydetail.index].status}" ng-click="mydetail.completed()" class="icon ion-android-done right"></span>
+        <p>Units required : {{posts[mydetail.index].units}}</p>
+
+        <p>Donation received : {{posts[mydetail.index].done}}</p>
+
+        <p>Still required : {{posts[mydetail.index].req}}</p>
+
+        <p>Blood Group : {{posts[mydetail.index].blood}}</p>
+
+        <p>Location : {{posts[mydetail.index].city}},  {{posts[mydetail.index].province}},  {{posts[mydetail.index].country}}</p>
+
+        <p>Hospital : {{posts[mydetail.index].hospital}}</p>
+
+        <p>Urgency : {{posts[mydetail.index].urgency}}</p>
+
+        <p>Relation with Patient : {{posts[mydetail.index].relation}}</p>
+
+        <p>Contact no : {{posts[mydetail.index].contact}}</p>
+
+        <p>Additional information : {{posts[mydetail.index].info}}</p>
+      </div>
+
+      <h2 style="text-align: center;color: rgb(218, 31, 39)">Volunteers</h2>
+
+      <div class="item item-text-wrap" ng-repeat="item in posts[mydetail.index].donors track by $index">
+        <p><span style="font-size: 1.3em">{{item.fName}} {{item.lName}}</span> -- {{item.blood}}</p>
+
+        <div class="button-bar">
+          <button class="button red" ng-click="mydetail.donated($index)">
+            Donated
+          </button>
+          &nbsp &nbsp
+          &nbsp &nbsp
+          <button class="button cyan" ng-click="mydetail.notDonated($index)">
+            Not Donated
+          </button>
+        </div>
+      </div>
+
+      <h2 style="text-align: center;color: rgb(33, 154, 137)">Comments</h2>
+
+      <div class="item item-text-wrap" ng-repeat="item in posts[mydetail.index].comments track by $index">
+        <p><span style="font-size: 1.3em;font-weight: bold;">{{item.name}}</span> -- {{item.text}}</p>
+      </div>
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" ng-model="mydetail.commentData"/>
+        </label>
+        <button class="button button-positive" ng-click="mydetail.comment(mydetail.commentData)">
+          POST
+        </button>
+      </div>
+     <!-- <form name="frm">
+        <input type="text" ng-model="mydetail.commentData"/>
+        <button class="button button-positive" ng-click="mydetail.comment(mydetail.commentData)">
+          POST
+        </button>
+      </form>-->
+    </div>
+
+  </ion-content>
+</ion-view>

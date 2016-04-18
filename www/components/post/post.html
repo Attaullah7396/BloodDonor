@@ -1,0 +1,124 @@
+<ion-view>
+  <ion-content>
+    <div class="list">
+      <form name="frm">
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Blood Group
+          </div>
+          <select ng-model="post.data.blood" required>
+            <option selected value="A Positive">A Positive</option>
+            <option value="B Positive">B Positive</option>
+            <option value="O Positive">O Positive</option>
+            <option value="A Negative">A Negative</option>
+            <option value="B Negative">B Negative</option>
+            <option value="O Negative">O Negative</option>
+          </select>
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            No. of Units
+          </div>
+          <select ng-model="post.data.units" required>
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Urgency
+          </div>
+          <select ng-model="post.data.urgency" required>
+            <option selected value="Urgent">Urgent</option>
+            <option value="Within 5 hours">Within 5 hours</option>
+            <option value="Within 12 hours">Within 12 hours</option>
+            <option value="Within 24 hours">Within 24 hours</option>
+            <option value="Within 2 days">Within 2 days</option>
+            <option value="Within week">Within week</option>
+          </select>
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Country
+          </div>
+          <select ng-model="post.data.country" required>
+            <option selected value="Pakistan">Pakistan</option>
+          </select>
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Province
+          </div>
+          <select ng-model="post.data.province" required>
+            <option selected value="Sindh">Sindh</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Baluchistan">Baluchistan</option>
+            <option value="Khyber Pakhtun khuaah">Khyber Pakhtun khuaah</option>
+          </select>
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            City
+          </div>
+          <select ng-model="post.data.city" required>
+            <option selected value="Karachi">Karchi</option>
+            <option value="Gujranwala">Gujranwala</option>
+            <option value="Rawalpindi">Rawalpindi</option>
+            <option value="Islamabd">Islamabad</option>
+            <option value="Peshawar">Peshawar</option>
+            <option value="Quetta">Quetta</option>
+            <option value="Hyderabad">Hyderabad</option>
+          </select>
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Hospital
+          </div>
+          <select ng-model="post.data.hospital" required>
+            <option selected value="Indus hospital">Indus hospital</option>
+            <option value="Ziauddin Khan Hospital">Ziauddin Khan Hospital</option>
+            <option value="Agha Khan Hospital">Agha Khan Hospital</option>
+            <option value="Liaquat National Hospital">Liaquat National Hospital</option>
+            <option value="OMI">OMI</option>
+            <option value="Jinnah Hospital">Jinnah Hospital</option>
+            <option value="Holly Family Hospital">Holly Family Hospital</option>
+          </select>
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Your relation with Patient
+          </div>
+          <select ng-model="post.data.relation" required>
+            <option selected value="Father">Father</option>
+            <option value="Mother">Mother</option>
+            <option value="Son">Son</option>
+            <option value="Daughter">Daughter</option>
+            <option value="Aunt">Aunt</option>
+            <option value="Uncle">Uncle</option>
+            <option value="Nephew">Nephew</option>
+            <option value="Niece">Niece</option>
+            <option value="Friend">Friend</option>
+            <option value="Neighbour">Neighbour</option>
+            <option value="None">None</option>
+          </select>
+        </label>
+        <label class="item item-input item-fixed-label">
+          <span class="input-label">Contact no.</span>
+          <input type="number" ng-model="post.data.contact" required>
+        </label>
+
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Additional information</span>
+          <textarea placeholder="Additional Information" cols="15" rows="4" ng-model="post.data.info"></textarea>
+        </label>
+
+        <button class="button button-block red" ng-disabled="frm.$invalid" ng-click="post.postData(post.data)">
+          POST
+        </button>
+      </form>
+    </div>
+
+    <br/><br/>
+  </ion-content>
+</ion-view>

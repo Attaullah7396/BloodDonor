@@ -1,0 +1,16 @@
+<br/>
+<br/>
+<br/>
+
+<ion-view>
+  <ion-content>
+    <div class="card" ng-repeat="item in notifications track by $index" ui-sref="appp.detail({index: $index})">
+      <div class="item item-text-wrap">
+        <p><strong>{{item.name}}</strong> required {{item.units}} units of <strong>{{item.blood}}</strong> blood at <strong>{{item.hospital}}</strong></p>
+      </div>
+    </div>
+
+    <h1 ng-show="!notifications.length">No notifications</h1>
+
+  </ion-content>
+</ion-view>

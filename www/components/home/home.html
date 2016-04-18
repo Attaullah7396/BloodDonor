@@ -1,0 +1,38 @@
+<ion-view>
+  <ion-content>
+
+    <div class="card" ng-repeat="item in posts track by $index" ng-hide="item.status">
+      <div class="item item-text-wrap" ui-sref="appp.detail({index: $index})">
+        <p class="main">{{item.name}}</p> <br/>
+        <p>{{item.units}} units of {{item.blood}} blood required</p>
+
+        <p>At {{item.hospital}} for my {{item.relation}}</p>
+        <span><strong>Urgency: </strong>{{item.urgency}}</span>
+
+        <p>Contact at : 1{{item.contact}}</p>
+
+        <p class="font-increase font-bold">Additional Instructions :</p>
+
+        <p>{{item.info}}</p>
+
+        <p class="font-increase">Volunteers uptill now : {{item.volunteers}}</p>
+
+        <p class="font-increase">Current requirements : 2</p>
+      </div>
+      <div class="item item-text-wrap">
+        <div class="button-bar">
+          <button class="button red" ng-click="home.volunteer($index)">
+            Volunteer
+          </button>
+          &nbsp &nbsp
+          &nbsp &nbsp
+          <button class="button cyan" ui-sref="appp.detail({index: $index})">
+            Comment
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

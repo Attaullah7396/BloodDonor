@@ -1,0 +1,54 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<ion-view>
+  <ion-content>
+
+    <div class="list">
+      <form name="frm"><
+        <label class="item item-input">
+          <span class="input-label">First Name</span>
+          <input type="text" ng-model="signup.user.fName" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Last Name</span>
+          <input type="text" ng-model="signup.user.lName" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="email" ng-model="signup.user.email" required>
+        </label>
+
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Blood Group
+          </div>
+          <select ng-model="signup.user.blood">
+            <option selected value="A Positive">A Positive</option>
+            <option value="B Positive">B Positive</option>
+            <option value="O Positive">O Positive</option>
+            <option value="A Negative">A Negative</option>
+            <option value="B Negative">B Negative</option>
+            <option value="O Negative">O Negative</option>
+          </select>
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="signup.user.pswd" required>
+        </label>
+
+        <button class="button button-balanced" ng-disabled="frm.$invalid" ng-click="signup.createUser(signup.user)">
+          Login
+        </button>
+
+        <p>Already signed Up?? <a ui-sref="signin">Click here</a></p>
+      </form>
+    </div>
+
+  </ion-content>
+</ion-view>

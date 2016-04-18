@@ -1,0 +1,17 @@
+<br/>
+<br/>
+<br/>
+
+<ion-view>
+  <ion-content>
+
+    <div class="card">
+      <div class="item item-text-wrap" ng-show="item.email==userEmail" ng-repeat="item in posts track by $index" ui-sref="appp.mypostdetail({index:$index})">
+        <p>Required {{item.units}} units of {{item.blood}} at {{item.hospital}}</p>
+        <p>status   :  <span ng-hide="item.status">Not fulfilled</span> <span ng-show="item.status">fulfilled</span></p>
+      </div>
+    </div>
+
+
+  </ion-content>
+</ion-view>
