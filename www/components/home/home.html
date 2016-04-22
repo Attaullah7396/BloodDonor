@@ -4,6 +4,7 @@
     <div class="card" ng-repeat="item in posts track by $index" ng-hide="item.status">
       <div class="item item-text-wrap" ui-sref="appp.detail({index: $index})">
         <p class="main">{{item.name}}</p> <br/>
+
         <p>{{item.units}} units of {{item.blood}} blood required</p>
 
         <p>At {{item.hospital}} for my {{item.relation}}</p>
@@ -21,7 +22,7 @@
       </div>
       <div class="item item-text-wrap">
         <div class="button-bar">
-          <button class="button red" ng-click="home.volunteer($index)">
+          <button class="button red" ng-click="home.volunteer($index)" ng-disabled="{{item.email == userEmail}}">
             Volunteer
           </button>
           &nbsp &nbsp

@@ -1,5 +1,5 @@
 angular.module('app.home', [])
-  .controller('HomeController', function($rootScope,$firebaseArray,$timeout) {
+  .controller('HomeController', function($rootScope,$firebaseArray,$ionicPopup) {
     var self = this;
     self.volunteer = function(index){
       var id = $rootScope.posts[index].$id;
@@ -9,7 +9,10 @@ angular.module('app.home', [])
         if(data[0]){
           for(var i= 0; i<data.length;i++){
             if(data[i].fName == $rootScope.userfName && data[i].lName == $rootScope.userlName ){
-              alert("You have already volunteered it");
+              $ionicPopup.alert({
+                title: 'Can\'t Volunteer!',
+                template: 'You have already volunteered it'
+              });
               return;
             }
           }

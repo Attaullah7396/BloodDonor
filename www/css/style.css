@@ -5,6 +5,9 @@
   font-size: 1.8em !important;
   font-weight: bold;
 }
+.main::first-letter{
+  text-transform: uppercase;
+}
 .spinner svg {
   width: 200px;
   height: 100px;
@@ -19,7 +22,6 @@
 .right{
   float: right;
   font-size: 100px;
-  padding-right: 50px;
 }
 .bgGreen{
   background-color: rgb(36,204,45);
@@ -35,10 +37,10 @@
 /*.ion-content{
   background-color: rgb(229,0,21) !important;
 }*/
-
 /*
+
 .scroll-content {
-  background-image: url(../img/a.jpg);
+  background-image: url(../img/c.jpg);
 }
 */
 

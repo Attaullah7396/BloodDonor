@@ -1,15 +1,14 @@
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+
 <ion-view>
   <ion-content>
-
+    <div class="bar bar-header red">
+      <h1 class="title" style="color:white !important;">Sign Up form</h1>
+    </div>
+    <br/>
+    <br/>
+    <br/>
     <div class="list">
-      <form name="frm"><
+      <form name="frm">
         <label class="item item-input">
           <span class="input-label">First Name</span>
           <input type="text" ng-model="signup.user.fName" required>
@@ -41,12 +40,11 @@
           <span class="input-label">Password</span>
           <input type="password" ng-model="signup.user.pswd" required>
         </label>
-
-        <button class="button button-balanced" ng-disabled="frm.$invalid" ng-click="signup.createUser(signup.user)">
-          Login
+        <button class="button button-block cyan" ng-disabled="frm.$invalid" ng-click="signup.createUser(signup.user)">
+          Submit
         </button>
 
-        <p>Already signed Up?? <a ui-sref="signin">Click here</a></p>
+        <p style="text-align: center;font-size: 1.3em">Already have an account??<br/><a ui-sref="signin">Click here</a></p>
       </form>
     </div>
 

@@ -6,7 +6,7 @@
   <ion-content>
     <div class="card" ng-repeat="item in notifications track by $index" ui-sref="appp.detail({index: $index})">
       <div class="item item-text-wrap">
-        <p><strong>{{item.name}}</strong> required {{item.units}} units of <strong>{{item.blood}}</strong> blood at <strong>{{item.hospital}}</strong></p>
+        <p><strong style="font-size:1.4em">{{item.name}}</strong> required {{item.units}} units of <strong style="font-size: 1.2em">{{item.blood}}</strong> blood at <strong style="font-size: 1.2em">{{item.hospital}}</strong></p>
       </div>
     </div>
 
